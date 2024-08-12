@@ -1,0 +1,131 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('images/To\ do\ list.jpg') no-repeat center center fixed; /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow for a lifted effect */
+    width: 360px;
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 10px;
+    backdrop-filter: blur(12px); /* Subtle blur effect for a glass-like appearance */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Slightly visible border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+    animation: fadeIn 1s ease-out; /* Fade-in animation when the page loads */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slightly enlarge the container on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#new-task {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded corners for input */
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#new-task:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Light shadow on focus */
+}
+
+#add-task {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px; /* Rounded corners for button */
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background for button */
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+#add-task:hover {
+    background: linear-gradient(135deg, #0056b3, #007bff); /* Inverted gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Subtle highlight on hover */
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+span {
+    font-size: 16px;
+    color: #333;
+}
+
+button.delete {
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+button.delete:hover {
+    background-color: #c82333;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
